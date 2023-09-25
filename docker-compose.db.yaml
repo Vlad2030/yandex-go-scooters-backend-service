@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  database:
+    container_name: ${POSTGRES_CONTAINER_NAME}
+    image: postgres:15
+    env_file:
+      - .env
+    ports:
+      - ${POSTGRES_CONTAINER_PORT}
+    volumes:
+      - postgres:/data/postgres
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 128M
+        reservations:
+          cpus: '0.50'
+          memory: 64M
+
+volumes:
+    postgres:
