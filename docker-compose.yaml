@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  server: 
+    container_name: ${SERVER_CONTAINER_NAME}
+    build: ./app
+    command: bash start.sh
+    env_file:
+      - .env
+    ports:
+      - ${SERVER_PORT}
+    depends_on:
+      - database
+    networks:
+      - database-network
+
+  database:
+    container_name: ${POSTGRES_CONTAINER_NAME}
+    image: postgres:15
+    env_file:
+      - .env
+    ports:
+      - ${POSTGRES_CONTAINER_PORT}
+    networks:
+      - database-network
+    volumes:
+      - postgres:/data/postgres
+
+networks:
+  database-network:
+    name: database-network
+    driver: bridge
+
+volumes:
+    postgres:
