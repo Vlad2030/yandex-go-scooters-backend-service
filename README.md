@@ -1,6 +1,7 @@
 # Yandex.Go scooters backend service
 This project is my attempt to recreate the Yandex.Go scooter rental microservice. For the backend of the application, I chose Python FastAPI framework. To control the IoT devices of scooters, I use MQTT technology. [There is also a MQTT client for scooters](https://github.com/Vlad2030/yandex-go-scooters-client)    
-> @yandex please hire me :)
+
+@yandex please hire me :)
 
 
 ## Dependencies
