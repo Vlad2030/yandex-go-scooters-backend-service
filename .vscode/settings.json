@@ -1,4 +1,4 @@
 {
-    "mojo.modularHomePath": "/home/pc/.modular",
+    "mojo.modularHomePath": "/home/vlad/.modular",
     "cquery.cacheDirectory": "${workspaceFolder}/.vscode/cquery_cached_index/"
 }
