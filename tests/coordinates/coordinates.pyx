@@ -66,7 +66,7 @@ def main():
     objects = generate_objects(
         start_pos_x=55,
         start_pos_y=37,
-        count=5_000_000,
+        count=50_000,
     )
     objects_end = time.perf_counter() - objects_start
 
